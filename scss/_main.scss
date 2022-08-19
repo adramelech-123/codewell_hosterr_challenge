@@ -1,0 +1,108 @@
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+    
+
+    .content {
+        max-width: 500px;
+
+        h1 {
+            font-family:'Times New Roman', Times, serif;
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            margin-bottom: 2rem;
+            font-size: $main-fs;
+            line-height: 1;
+            color: $main-fc;
+            text-align: justify;
+        }
+
+        input {
+            border-style: none;
+            padding: 20px 80px 20px 20px;
+            margin-right: 2 0px;
+            border-radius: 5px;
+            font-size: $main-fs;
+        }
+
+        &-below {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+
+            span {
+                padding-top: 5px;
+                padding-left: 10px;
+                color: #5a5959;
+            }
+        }
+
+    }
+
+    .hero {
+        // position: relative; if you set relative to container you will have issues with flexbox on resizing
+        display: flex;
+        justify-content: flex-end;
+        flex: 1;
+
+        .hero-image {
+            position: relative; //set to relative so that back images can be in refrence to this image
+            top: 0;
+            left: 0;
+            z-index: 5;
+        }
+    
+        .hero-image2 {
+            position: absolute;
+            z-index: 2;
+            transform: rotate(-30deg);
+        }
+
+        .hero-image3 {
+            position: absolute;
+            z-index: 1;
+            transform: rotate(-40deg);
+        }
+
+        .hero-image4 {
+            position: absolute;
+            z-index: 4;
+            transform: rotate(-15deg);
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1200px) {
+
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+        
+        .content {
+            max-width: 100%; 
+        }
+
+    }    
+}
+
+@media screen and (max-width: 720px) {
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        button {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+    }
+}
+

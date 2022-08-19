@@ -1,0 +1,66 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        
+        li {
+            padding: 1rem;
+        }
+    }
+
+    a {
+        text-decoration: none;  
+        transition: all ease 0.3s;
+        font-size: $main-fs;
+        color: $main-fc;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    button {
+        border-style: none;
+        padding: 20px 25px;
+        border-radius: 5px;
+        background-color: $primary-color;
+        color: white;
+        margin-left: 1.2rem;
+        cursor: pointer;
+        font-size: 0.8rem;
+        font-weight: bold;
+        transition: all ease 0.3s;
+
+        &:hover {
+            background-color: $secondary-color;
+        }
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1250px) {
+
+  nav ul, nav div {
+      display: none;
+  }
+
+  nav {
+      display: flex;
+
+      .hamburger {
+        display: inline;
+    }
+  }
+ 
+}

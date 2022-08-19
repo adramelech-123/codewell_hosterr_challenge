@@ -1,0 +1,16 @@
+button {
+    border-style: none;
+    padding: 23px 30px;
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: white;
+    margin-left: 1.2rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: all ease 0.3s;
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+}
